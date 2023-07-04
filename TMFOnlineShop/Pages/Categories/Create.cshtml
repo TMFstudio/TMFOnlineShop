@@ -1,0 +1,56 @@
+﻿@page
+@model TMFOnlineShop.Pages.Categories.CreateModel
+<form method="post">
+    <div class="col-12 ">
+        <h2 class="text-primary border-bottom">Category List</h2>
+    </div>
+    <div class="container p-3">
+        <div class="row col-6">
+            <div class="row col-md-12">
+                <div class="col-md-3">
+                    <label asp-for="@Model.category.Name" class="form-label"></label>
+                </div>
+                <div class="col-md-9">
+                    <input asp-for="@Model.category.Name" type="text" class="form-control" />
+                    <br />
+                </div>
+                <br />
+            </div>
+            <div class="row col-md-12">
+                <div class="col-md-3">
+                    <label asp-for="@Model.category.Description" class="form-label"></label>
+                </div>
+                <div class="col-md-9">
+                    <textarea asp-for="@Model.category.Description" type="text" class="form-control"></textarea>
+                    <br />
+                </div>
+            </div>
+            <div class="row col-md-12">
+                <div class="col-md-3">
+                    <label asp-for="@Model.category.CreateOnUtc" class="form-label"></label>
+                </div>
+                <div class="col-md-9">
+                    <input asp-for="@Model.category.CreateOnUtc" type="date" class="form-control" />
+                    <br />
+                </div>
+            </div>
+            <div class="row col-md-12">
+                <div class="col-md-3">
+                    <label asp-for="@Model.category.DisplayOrder" class="form-label"></label>
+                </div>
+                <div class="col-md-9">
+                    <input asp-for="@Model.category.DisplayOrder" type="number" class="form-control" />
+                    <br />
+                </div>
+
+            </div>
+
+            <div class="col-6">
+                <div class="col-12">
+                    <br />
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </div>
+            </div>
+        </div>
+
+</form>

@@ -1,0 +1,44 @@
+﻿@page
+@model TMFOnlineShop.Pages.Categories.CategoriesModel
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6 ">
+            <h2 class="text-primary">Category List</h2>
+        </div>
+
+        <div class="col-6">
+            <a asp-page="create" class="btn btn-primary">
+                Create new Category
+            </a>
+        </div>
+    </div>
+
+<br />
+<br />
+<table class="table table-bordered table-striped table-" style="width:100%">
+    <thead class="thead-light">
+        <tr>
+
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">CreateOnUtc</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var obj in Model.categories)
+        {
+            <tr>
+                <td>@obj.Id</td>
+                <td>@obj.Name</td>
+                <td>@obj.Description</td>
+                <td>@obj.CreateOnUtc</td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+</div>
